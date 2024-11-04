@@ -1,0 +1,25 @@
+.headerBtn{
+    margin-left: 25rem;
+}
+.nav-item{
+    margin-right:1.5em ;
+
+}
+.nav-link{
+    font-weight: 700 !important;
+}
+.nav-link:hover{
+    color: #5B8C51;
+}
+.header-logo{
+    width: 10em;
+    height: 3em;
+}
+.container-fluid{
+    padding: 0em 2.5em 0 2.5em;
+}
+.btn-lg{
+    border-radius: 30px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
