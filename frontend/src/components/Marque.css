@@ -1,0 +1,23 @@
+
+/* Marquee wrapper */
+.marquee {
+    font-size: 8em;
+    width: 100%;            /* Full width */
+    overflow: hidden;       /* Hide overflow */
+    white-space: nowrap;    /* Prevent text from wrapping */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* Text scrolling animation */
+.marquee {
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%); /* Start from the right */
+    }
+    to {
+        transform: translateX(-100%); /* Scroll all the way to the left */
+    }
+}
