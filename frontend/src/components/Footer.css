@@ -1,0 +1,52 @@
+.footer{
+    padding-top: 4em;
+}
+.footer-second{
+    padding-top: 2.6em;
+}
+.footer-logo{
+    width: 16em;
+    height:6em; 
+}
+.footer-first-h3{
+    width: 22em;
+}
+.footersec1div2{
+    font-family: "Signika", sans-serif;
+    font-size: 2.4em;
+    font-weight: 500;
+    line-height: 42px;
+    overflow-x: hidden;
+    color: #404A3D;
+}
+.footer-tabHead{
+    font-family: "Signika", sans-serif;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #404A3D;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    color: #404A3D;
+}
+.footer-secondsec-p{
+    width: 20em;
+}
+.footer-socials{
+    width: 20em;
+    display: flex;
+}
+.fa-brands{
+    padding-right: 0.5em;
+    font-size: 1.2em;
+    color: #5B8C51;
+}
+.copyright-box{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #D9DBD8;
+    padding-top: 2em;
+}

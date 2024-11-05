@@ -6,9 +6,8 @@ import Marque from './Marque'
 function HomePage() {
   return (
     <>
-        <Header/>
         <Hero />
-        <Marque />
+        {/* <Marque /> */}
     </>
   )
 }
