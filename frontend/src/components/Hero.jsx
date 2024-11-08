@@ -5,23 +5,24 @@ function Hero() {
     const heroDetails = [
         {
             url: 'https://images.pexels.com/photos/5216150/pexels-photo-5216150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            roundP: "freshness is important 1",
-            myH3: "Growing veggies for better",
-            secondP: "We all need a little space to grow, give yourself space"
+            roundP: "better feed better growth",
+            myH3: "Livestock health and growth matter",
+            secondP: "Good livestock feed gives you healthy meat."
         },
         {
             url: 'https://images.pexels.com/photos/7082626/pexels-photo-7082626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            roundP: "freshness is important 2",
-            myH3: "Growing veggies for better",
-            secondP: "We all need a little space to grow, give yourself space"
+            roundP: "feed that fuels strength",
+            myH3: "Nutritious feed for resilient animals",
+            secondP: "High-quality feed ensures strong and healthy animals."
         },
         {
             url: 'https://images.pexels.com/photos/18903798/pexels-photo-18903798/free-photo-of-hens-in-cage.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            roundP: "freshness is important 3",
-            myH3: "Growing veggies for better",
-            secondP: "We all need a little space to grow, give yourself space"
+            roundP: "feed that keeps them thriving",
+            myH3: "Essential nutrition for every flock",
+            secondP: "Proper poultry feed supports growth and quality eggs."
         }
     ];
+    
 
     const [randNum, setRandNum] = useState(Math.floor(Math.random() * heroDetails.length)); // Initialize state with a random number
 
