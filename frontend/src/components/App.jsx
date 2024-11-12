@@ -1,8 +1,7 @@
-import React from 'react'
-import HomePage from './HomePage'
-import Footer from './Footer'
-import Header from './Header'
-
+import React from "react";
+import HomePage from "./HomePage";
+import Footer from "./Footer";
+import Header from "./Header";
 
 function App() {
   return (
@@ -11,7 +10,7 @@ function App() {
       <HomePage />
       <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
