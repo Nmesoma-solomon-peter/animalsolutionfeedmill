@@ -1,13 +1,12 @@
 import React from 'react'
 import "./Whatwedobrief.css"
 import farmer from "../assets/farmerman.jpg"
+import coweat from "../assets/coweat.jpg"
 
 function Whatwedobrief() {
     return (
         <div className='row container-fluid mt-5 what-parent-div'>
-            <div className='col-lg-6 what-left'>
-                <img src={farmer} alt="farmer tending livestock" className='what-img' />
-            </div>
+           
             <div className='col-lg-6 what-yellow'>
                 <div>
                     <p className='what-first-p'> <i className="fa-solid fa-seedling"></i> Our Mission</p>
@@ -32,6 +31,10 @@ function Whatwedobrief() {
                     </div>
                     {/* <button type="button" className="btn color-white btn-lg what-btn">Learn More</button> */}
                 </div>
+            </div>
+
+            <div className='col-lg-6 what-left'>
+                <img src={coweat} alt="farmer tending livestock" className='what-img' />
             </div>
         </div>
     )
