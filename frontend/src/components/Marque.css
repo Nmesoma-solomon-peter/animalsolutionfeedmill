@@ -1,23 +1,20 @@
-
-/* Marquee wrapper */
-.marquee {
-    font-size: 8em;
-    width: 100%;            /* Full width */
-    overflow: hidden;       /* Hide overflow */
-    white-space: nowrap;    /* Prevent text from wrapping */
-    box-sizing: border-box; /* Include padding and border in the width */
+.marquee-Parent{
+    padding-top: 2em;
+    margin-top: 2em;
+    margin-bottom: 4em;
+    /* background-color: #F8F7F0; */
 }
-
-/* Text scrolling animation */
-.marquee {
-    animation: scroll 10s linear infinite;
+.marquee-text{
+    font-family: "Signika", sans-serif;
+    font-size: 5em;
+    text-align: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #404A3D;
 }
-
-@keyframes scroll {
-    from {
-        transform: translateX(100%); /* Start from the right */
-    }
-    to {
-        transform: translateX(-100%); /* Scroll all the way to the left */
-    }
+.star {
+    font-family: "Signika", sans-serif;
+    justify-content: center;
+    align-items: center;
+    color: #404A3D;
 }

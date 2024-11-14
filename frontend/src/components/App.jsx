@@ -2,14 +2,29 @@ import React from 'react'
 import HomePage from './HomePage'
 import Footer from './Footer'
 import Header from './Header'
+import Services from './Services'
+import Aboutus from './Aboutus'
+import Contactus from './Contactus'
+import Blog from './Blog'
+import { Router, Route, Routes } from "react-router-dom";
+
 
 
 function App() {
   return (
     <div>
-      <Header />
-      <HomePage />
-      <Footer />
+
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/aboutus" element={<Aboutus />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contactus" element={<Contactus />} />
+        </Routes>
+
+        <Footer />
+
     </div>
   )
 }

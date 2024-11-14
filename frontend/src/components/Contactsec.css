@@ -1,0 +1,42 @@
+.content-parent{
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+.contactsec__col{
+    background: #f8f8f8;
+    color: #000;
+    padding: 50px 80px 75px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-right: -30px;
+}
+.contactsec__col{
+    color: #000 !important;
+}
+
+.contactsec-in{
+color: #000;
+}
+
+.contactIcon{
+    font-size: 30px;
+    color:#404A3D;
+}
+
+
+
+.contactIcon-box {
+    background-color: #EDDD5E; /* Set the background color */
+    border-radius: 50%;       /* Make it round */
+    width: 80px;              /* Set a width for the circle */
+    height: 80px;             /* Set a height for the circle */
+    display: flex;            /* Center the icon within */
+    align-items: center;      /* Vertically center the icon */
+    justify-content: center;  /* Horizontally center the icon */
+    margin: 0 auto;           /* Center the box in the column */
+}
+
+.cont-fluid{
+    padding-left: 6em;
+    padding-right: 8em;
+  }
