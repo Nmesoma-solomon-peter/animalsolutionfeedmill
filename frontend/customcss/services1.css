@@ -46,30 +46,8 @@ button {
     background: #f8f9fa;
 }
 
-.fish-image{
-    width: 100%;         
-    height: 200px;        
-    object-fit: cover;   
-    border-radius: 5px;   
-}
-.pig-image{
-    width: 100%;         
-    height: 200px;        
-    object-fit: cover;   
-    border-radius: 5px;   
-}
-.rabbit-image{
-    width: 100%;         
-    height: 200px;        
-    object-fit: cover;   
-    border-radius: 5px;   
-}
-.poultry-image{
-    width: 100%;         
-    height: 200px;        
-    object-fit: cover;   
-    border-radius: 5px;   
-}
+
+
 
 .service-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
