@@ -7,6 +7,7 @@ import Aboutus from './Aboutus'
 import Contactus from './Contactus'
 import Blog from './Blog'
 import { Router, Route, Routes } from "react-router-dom";
+import Species from './species'
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/contactus" element={<Contactus />} />
+          <Route path='/species' element={<Species />} />
         </Routes>
 
         <Footer />
