@@ -27,3 +27,34 @@
     color: #6D6D6C;
     line-height: 26px;
 }
+
+@media  only screen and (max-width: 600px) {
+    .whoweare-parent {
+        min-height: 100vh;
+        padding-top: 2em;
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .whoweare-left-img{ 
+        background-image: url('../assets/sheepdem.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius: 30px; 
+    }
+    .whoweare-right-dev{
+        padding: 5em 0em 5em 0em;
+    }
+    .whoweare-innerfa{
+        color:#7BA171;
+        font-size: 4em;
+    }
+    .whoweare-h3{
+        color: #404A3D;
+        font-weight: 500;
+        font-size: 1.8em;
+        font-family: "Signika", sans-serif;
+        margin-top: 2em;
+    }
+}

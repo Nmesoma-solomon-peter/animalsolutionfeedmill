@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Species() {
     return (
         <>
@@ -14,7 +16,7 @@ function Species() {
                                 <h3>Cow</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <a href="cow.html" className="button">cow feeds</a>
+                                    <Link to={"/cowFeeds"} className="button">cow feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +92,7 @@ function Species() {
                     </div>
                 </div>
                 <div className="back-link">
-                    <a href="services.html" className="button">Back to Services</a>
+                    <Link to="/services" className="button">Back to Services</Link>
                 </div>
             </section>
         </>
