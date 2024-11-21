@@ -16,7 +16,7 @@ function Species() {
                                 <h3>Cow</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <a href="cow.html" className="button">cow feeds</a>
+                                    <Link to={"/cowFeeds"} className="button">cow feeds</Link>
                                 </div>
                             </div>
                         </div>
