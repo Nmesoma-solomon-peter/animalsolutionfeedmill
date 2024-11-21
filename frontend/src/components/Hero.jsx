@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; // Don't forget to import useEffect and useState
+import { useEffect, useState } from 'react';
 import './Hero.css';
 
 function Hero() {
@@ -43,7 +43,7 @@ function Hero() {
                     backgroundImage: `url(${heroDetails[randNum].url})`,
                     fontSize: '20px',
                     width: '100%',
-                    height: '90vh',
+                    height: '100%',
                     backgroundSize: 'cover',       // Ensures the image covers the entire div
                     backgroundPosition: 'center',  // Centers the image within the div
                     backgroundRepeat: 'no-repeat', // Prevents the image from repeating
@@ -56,7 +56,7 @@ function Hero() {
                     <h2 className='hero-h2'>
                         {heroDetails[randNum].myH3}
                     </h2>
-                    <p>{heroDetails[randNum].secondP}</p>
+                    <p className='hero-p2'>{heroDetails[randNum].secondP}</p>
                     <button type="button" className="btn bg-white color-white btn-lg hero-btn">Contact us</button>
                 </div>
                 </div>

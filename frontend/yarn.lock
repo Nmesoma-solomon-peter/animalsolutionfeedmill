@@ -726,9 +726,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001669:
-  version "1.0.30001680"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001680.tgz#5380ede637a33b9f9f1fc6045ea99bd142f3da5e"
-  integrity sha512-rPQy70G6AGUMnbwS1z6Xg+RkHYPAi18ihs47GH0jcxIG7wArmPgY3XbS2sRdBbxJljp3thdT8BIqv9ccCypiPA==
+  version "1.0.30001683"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001683.tgz#7f026a2d5d319a9cf8915a1451173052caaadc81"
+  integrity sha512-iqmNnThZ0n70mNwvxpEC2nBJ037ZHZUoBI5Gorh1Mw6IlEAZujEoU1tXA628iZfzm7R9FvFzxbfdgml82a3k8Q==
 
 chalk@^4.0.0:
   version "4.1.2"
@@ -1178,7 +1178,7 @@ for-each@^0.3.3:
   version "0.0.0"
   dependencies:
     bootstrap "5.3.3"
-    frontend "file:../../../../../../AppData/Local/Yarn/Cache/v6/npm-frontend-0.0.0-51abb936-eacc-4e60-8e9c-0a43c5eedd11-1732091297456/node_modules/frontend"
+    frontend "file:../../../../../../AppData/Local/Yarn/Cache/v6/npm-frontend-0.0.0-735e02c7-b5e4-4edd-a09e-3b198570d405-1732175647359/node_modules/frontend"
     react "^18.3.1"
     react-dom "^18.3.1"
     react-fast-marquee "^1.6.5"

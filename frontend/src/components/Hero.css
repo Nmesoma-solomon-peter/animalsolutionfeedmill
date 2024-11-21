@@ -1,30 +1,59 @@
-.heroDiv{
+.heroDiv {
     color: #fff;
+    width: 100%;
 }
-.hero-bg-color{
-    background-color: rgba(91,140,81,0.4);
+
+.hero-bg-color {
+    background-color: rgba(91, 140, 81, 0.4);
     width: 100%;
     height: 100%;
     z-index: 0;
 }
-.hero-innerDiv{
+
+.hero-innerDiv {
     width: 50vw;
     padding-top: 30vh;
     padding-left: 3em;
+    padding-bottom: 10em;
 }
-.hero-p1{
+
+.hero-p1 {
     border: 1px solid #fff;
     border-radius: 30px;
     text-align: center;
     width: 15rem;
     font-size: 0.839em; 
 }
-.hero-h2{
+
+.hero-h2 {
     font-size: 4rem;
     border-bottom: 1px solid #fff;
     padding-bottom: 0.4em;
 }
-.hero-btn:hover{
+
+.hero-btn:hover {
     background-color: #5B8C51 !important;
     color: #fff !important;
+}
+
+@media (max-width: 768px) {
+    .hero-innerDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding-top: 3em;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-bottom: 5em;
+    }
+
+    .hero-p2 {
+        text-align: center;
+    }
+
+    .heroDiv {
+        height: 60vh;
+    }
 }
