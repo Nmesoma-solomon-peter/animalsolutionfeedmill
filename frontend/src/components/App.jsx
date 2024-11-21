@@ -8,6 +8,7 @@ import Contactus from "./Contactus";
 import Blog from "./Blog";
 import { Router, Route, Routes } from "react-router-dom";
 import Species from "./species";
+import CowFeeds from "./cowFeeds";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/species" element={<Species />} />
+        <Route path="/cowFeeds" element={<CowFeeds />} />
       </Routes>
 
       <Footer />
