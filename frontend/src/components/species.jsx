@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Species() {
     return (
         <>
@@ -90,7 +92,7 @@ function Species() {
                     </div>
                 </div>
                 <div className="back-link">
-                    <a href="services.html" className="button">Back to Services</a>
+                    <Link to="/services" className="button">Back to Services</Link>
                 </div>
             </section>
         </>
