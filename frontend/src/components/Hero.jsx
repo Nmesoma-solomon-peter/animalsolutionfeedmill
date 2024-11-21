@@ -4,13 +4,15 @@ import './Hero.css';
 function Hero() {
     const heroDetails = [
         {
-            url: 'https://images.pexels.com/photos/5216150/pexels-photo-5216150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            roundP: "better feed better growth",
-            myH3: "Livestock health and growth matter",
+            // url: 'https://images.pexels.com/photos/5216150/pexels-photo-5216150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            url: 'https://media.istockphoto.com/id/2173087094/photo/feeding-cows-in-a-dairy-barn-with-automated-machinery.jpg?s=170667a&w=0&k=20&c=GMAmXlYlBcxO8DkVYmQVVNc76z4HbNtVXQqetRUcZic=',
+            roundP: "better feed, better growth",
+            myH3: "Livestock feed that promotes health",
             secondP: "Good livestock feed gives you healthy meat."
         },
         {
-            url: 'https://images.pexels.com/photos/7082626/pexels-photo-7082626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            // url: 'https://images.pexels.com/photos/7082626/pexels-photo-7082626.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            url: 'https://www.feedpelletmills.com/d/images/pig-feed-pellets-1.jpg',
             roundP: "feed that fuels strength",
             myH3: "Nutritious feed for resilient animals",
             secondP: "High-quality feed ensures strong and healthy animals."
