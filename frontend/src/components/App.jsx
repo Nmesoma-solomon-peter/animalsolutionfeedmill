@@ -1,4 +1,3 @@
-import React from "react";
 import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -6,9 +5,10 @@ import Services from "./Services";
 import Aboutus from "./Aboutus";
 import Contactus from "./Contactus";
 import Blog from "./Blog";
-import { Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Species from "./species";
 import CowFeeds from "./cowFeeds";
+import Sheep from "./Sheep";
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/species" element={<Species />} />
         <Route path="/cowFeeds" element={<CowFeeds />} />
+        <Route path="/sheep" element={<Sheep />} />
       </Routes>
 
       <Footer />
