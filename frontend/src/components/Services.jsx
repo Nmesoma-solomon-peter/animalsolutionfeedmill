@@ -42,7 +42,7 @@ function Services() {
                   <img src="https://farmersreviewafrica.com/wp-content/uploads/2022/03/DSC_1457.jpg" alt="Pig" className="technicalsupp" />
                   <h3>Consulation services</h3>
                   <p>Comprehensive quality testing and certification services for all dairy products.</p>
-                  <button onClick="scrollToSection('about')"><Link to={"/species"} className="learn-more-button">Learn More</Link></button>
+                  <button onClick="scrollToSection('about')"><Link to={"/articles"} className="learn-more-button">Learn More</Link></button>
                 </div>
               </div>
             </div>
