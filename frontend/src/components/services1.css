@@ -66,6 +66,11 @@ button {
   object-fit: cover;   
   border-radius: 5px; 
 }
+.tech-image{
+    width: 100%;
+    max-width: 200px;
+  
+}
   .container {
     max-width: 1250px;
     margin: 0 auto;

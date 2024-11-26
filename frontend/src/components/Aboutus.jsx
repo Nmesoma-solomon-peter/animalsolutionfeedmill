@@ -1,5 +1,9 @@
 import React from "react";
 import "./AboutUs.css";
+import Footer from "./Footer";
+import EmmanuelOlatejo from "../assets/EmmanuelOladejo.jpg";
+import GeneralManager from "../assets/Generalmanager.jpg";
+import OladejoIsreal from "../assets/OladejoIsrael.png";
 
 function Aboutus() {
   return (
@@ -33,12 +37,41 @@ function Aboutus() {
         technical advisory services.
       </p>
       <h2>Meet the Team</h2>
-      <ul>
-        <li>Emmanuel OLADEJO- CEO</li>
-        <li>Caline UWINGABIRE - Project maanager</li>
-        <li>Peter NMESOMA - Lead Developer</li>
-        <li>Raissa IRUTINGABO - UX/UI Designer</li>
-      </ul>
+      <div className="card-container">
+        <div className="card">
+          <img src={EmmanuelOlatejo} alt="Emmanuel Oladejo" />
+          <div className="card-overlay">
+            <h2 className="card-title">
+              <b>Emmanuel OLADEJO</b>
+            </h2>
+            <p className="card-description">
+              Emmanuel Oladejo, PhD Co-founder/ Director of Technical Services
+            </p>
+          </div>
+        </div>
+        <div className="card1">
+          <img src={OladejoIsreal} alt=" Israel Oladejo" />
+          <div className="card-overlay">
+            <h2 className="card-title">
+              <b>Israel OLADEJO</b>
+            </h2>
+            <p className="card-description">
+              Mr. Israel Oladejo Cofounder/Operations and Strategy Lead
+            </p>
+          </div>
+        </div>
+        <div className="card2">
+          <img src={GeneralManager} alt="General Manager" />
+          <div className="card-overlay">
+            <h2 className="card-title">
+              <b>Gen. Manager</b>
+            </h2>
+            <p className="card-description">
+              General manager and Supply Chain Lead
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
