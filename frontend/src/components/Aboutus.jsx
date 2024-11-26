@@ -39,7 +39,7 @@ function Aboutus() {
       <h2>Meet the Team</h2>
       <div className="card-container">
         <div className="card">
-          <img imageUrl="../assets/EmmanuelOladejo.jpg" />
+          <img src={EmmanuelOlatejo} alt="Emmanuel Oladejo" />
           <div className="card-overlay">
             <h2>Emmanuel OLADEJO</h2>
             <p className="card-description">
@@ -48,7 +48,7 @@ function Aboutus() {
           </div>
         </div>
         <div className="card1">
-          <img imageUrl="../assets/OladejoIsrael.png" />
+          <img src={OladejoIsreal} alt=" Israel Oladejo" />
           <div className="card-overlay">
             <h2>Israel OLADEJO</h2>
             <p className="card-description">
@@ -57,7 +57,7 @@ function Aboutus() {
           </div>
         </div>
         <div className="card2">
-          <img imageUrl="../assets/Generalmanager.jpg" />
+          <img src={GeneralManager} alt="General Manager" />
           <div className="card-overlay">
             <h2>Gen. Manager</h2>
             <p className="card-description">

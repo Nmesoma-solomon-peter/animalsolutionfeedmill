@@ -65,16 +65,17 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  color: #ffffff;
 }
 
 .card:hover .card-overlay {
-  opacity: 1;
+  opacity: 10;
 }
 
 .card-description {
-  color: #fff;
+  color: #ffffff;
   text-align: left;
-  padding: 0 10px;
+  padding: 0 0;
 }
 
 .card1 {
@@ -92,9 +93,9 @@
 }
 
 .card1-description {
-  color: #fff;
-  text-align: left;
-  padding: 0 10px;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 0;
 }
 .card2 {
   width: 300px;
@@ -105,14 +106,14 @@
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  color: #fff;
 }
 
 .card2:hover .card-overlay {
   opacity: 1;
+  color: #ffffff;
 }
 
 .card2-description {
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
