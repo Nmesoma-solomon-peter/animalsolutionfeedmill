@@ -35,7 +35,7 @@
 }
 
 /* Vertical service cards layout */
-.services-grid {
+.feed-services-grid {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -43,7 +43,7 @@
     margin: 0 auto;
 }
 
-.service-card {
+.feed-service-card {
     display: flex;
     background: white;
     border-radius: 8px;
@@ -53,16 +53,16 @@
     transition: transform 0.3s ease;
 }
 
-.service-card:hover {
+.feed-service-card:hover {
     transform: translateY(-5px);
 }
 
-.service-content {
+.feed-service-content {
     width: 300px;
     flex-shrink: 0;
 }
 
-.service-content img.technicalsupp {
+.feed-service-content img.technicalsupp {
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -70,7 +70,7 @@
     margin-bottom: 15px;
 }
 
-.service-content h3 {
+.feed-service-content h3 {
     font-size: 20px;
     color: #333;
     margin: 10px 0;
@@ -95,7 +95,7 @@
     margin-top: 40px;
 }
 
-.button {
+.feed-button {
     display: inline-block;
     padding: 12px 15px;
     background: #09542f;

@@ -1,4 +1,5 @@
-import "../../customcss/services1.css";
+// import "../../customcss/services1.css";
+import "./services1.css"
 import { Link, Navigate } from "react-router-dom";
 function Services() {
   // const scrollToSection = (sectionId) => {
@@ -10,7 +11,7 @@ function Services() {
 
   return (
     <>
-      <section className="services-section">
+      <div className="services-section">
         <div className="container">
           <div className="section-title">
             <h2>Services</h2>
@@ -18,7 +19,7 @@ function Services() {
               We are committed to innovation, sustainability, and providing expert guidance to help farmers thrive in a competitive agricultural environment.<br />
             </p>
           </div>
-          <div className="spicies of animals">
+          <div className="">
             <div className="services-grid">
               <div className="service-card" data-aos="fade-up" data-aos-duration="800">
                 <div className="service-content">
@@ -48,7 +49,7 @@ function Services() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </>
   )
 }

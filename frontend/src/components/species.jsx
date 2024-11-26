@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// import "./services1.css"
 function Species() {
     return (
         <>
@@ -16,7 +16,7 @@ function Species() {
                                 <h3>Cow</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <Link to={"/cowFeeds"} className="button">cow feeds</Link>
+                                    <Link to={"/cowfeed"} className="button">cow feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -26,7 +26,8 @@ function Species() {
                                 <h3>Sheep</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <a href="sheep.html" className="button">Sheep feeds</a>
+                                    <Link to={"/sheepfeed"} className="button">Sheep feeds</Link>
+
                                 </div>
                             </div>
                         </div>
@@ -36,7 +37,7 @@ function Species() {
                                 <h3>Goat</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <a href="goat.html" className="button">Goat feeds</a>
+                                    <Link to={"/goatfeed"} className="button">Goat feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +47,7 @@ function Species() {
                                 <h3>Fish</h3>
                                 <p>Modern processing facilities ensuring the highest quality dairy products from farm to table.</p>
                                 <div className="back-link">
-                                    <a href="fish.html" className="button">Fish feeds</a>
+                                    <Link to={"/fishfeed"} className="button">Fish feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -56,7 +57,7 @@ function Species() {
                                 <h3>Pig</h3>
                                 <p>Comprehensive quality testing and certification services for all dairy products.</p>
                                 <div className="back-link">
-                                    <a href="pig.html" className="button">Pig feeds</a>
+                                    <Link to={"/pig"} className="button">Pig feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +67,7 @@ function Species() {
                                 <h3>Rabbit</h3>
                                 <p>State-of-the-art facilities and expert management for optimal milk production with strict quality controls.</p>
                                 <div className="back-link">
-                                    <a href="rabbit.html" className="button">Rabbit feeds</a>
+                                    <Link to={"/rabbitfeed"} className="button">Rabbit feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +77,7 @@ function Species() {
                                 <h3>Poultry</h3>
                                 <p>Modern processing facilities ensuring the highest quality dairy products from farm to table.</p>
                                 <div className="back-link">
-                                    <a href="poultry.html" className="button">Poultry feeds</a>
+                                    <Link to={"/poultryfeed"} className="button">Poultry feeds</Link>
                                 </div>
                             </div>
                         </div>
@@ -87,6 +88,7 @@ function Species() {
                                 <p>Comprehensive quality testing and certification services for all dairy products.</p>
                                 <div className="back-link" />
                                 <a href="snails.html" className="button">Snails feeds</a>
+                                <Link to={"/snailfeed"} className="button">Snails feeds</Link>
                             </div>
                         </div>
                     </div>
