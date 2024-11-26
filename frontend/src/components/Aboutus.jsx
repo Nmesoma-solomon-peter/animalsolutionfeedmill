@@ -41,7 +41,9 @@ function Aboutus() {
         <div className="card">
           <img src={EmmanuelOlatejo} alt="Emmanuel Oladejo" />
           <div className="card-overlay">
-            <h2>Emmanuel OLADEJO</h2>
+            <h2 className="card-title">
+              <b>Emmanuel OLADEJO</b>
+            </h2>
             <p className="card-description">
               Emmanuel Oladejo, PhD Co-founder/ Director of Technical Services
             </p>
@@ -50,7 +52,9 @@ function Aboutus() {
         <div className="card1">
           <img src={OladejoIsreal} alt=" Israel Oladejo" />
           <div className="card-overlay">
-            <h2>Israel OLADEJO</h2>
+            <h2 className="card-title">
+              <b>Israel OLADEJO</b>
+            </h2>
             <p className="card-description">
               Mr. Israel Oladejo Cofounder/Operations and Strategy Lead
             </p>
@@ -59,7 +63,9 @@ function Aboutus() {
         <div className="card2">
           <img src={GeneralManager} alt="General Manager" />
           <div className="card-overlay">
-            <h2>Gen. Manager</h2>
+            <h2 className="card-title">
+              <b>Gen. Manager</b>
+            </h2>
             <p className="card-description">
               General manager and Supply Chain Lead
             </p>
