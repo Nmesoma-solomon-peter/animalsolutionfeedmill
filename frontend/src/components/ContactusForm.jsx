@@ -15,7 +15,7 @@ function ContactusForm() {
                         <p className='what-first-p'> <i className="fa-solid fa-seedling"></i> Get in touch
                         </p>
                         <h3 className='what-h3'>Have any Questions? Get in Touch!</h3>
-                        <form action="" method="POST">
+                        <form action="https://getform.io/f/awnnvklb" method="POST">
                             <div class="row formrow">
                                 <div class="col-sm-6">
                                     {/* <!-- Single Form Start --> */}
@@ -27,7 +27,7 @@ function ContactusForm() {
                                 <div class="col-sm-6">
                                     {/* <!-- Single Form Start --> */}
                                     <div class="single-form">
-                                        <input type="number" placeholder="Phone number *" name='phone' required />
+                                        <input type="tel" placeholder="Phone number *" name='phone' required />
                                     </div>
                                     {/* <!-- Single Form End --> */}
                                 </div>
