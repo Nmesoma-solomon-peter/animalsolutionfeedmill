@@ -18,8 +18,13 @@ import Snail from "./Snail";
 import Dashboard from "./Dashboard/Dashboard";
 import Signup from "./Auth/Signup";
 import Login from "./Auth/Login";
+import { useLocation } from 'react-router-dom';
+import SingleBlog from "./SingleBlog";
 
 function App() {
+  const location = useLocation();
+  const hideFooterRoutes = ["/dashboard"];
+
   return (
     <div>
       <Header />
@@ -28,6 +33,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/Aboutus" element={<Aboutus />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blogs/:id" element={<SingleBlog />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/species" element={<Species />} />
         <Route path="/cowfeed" element={<Cowfeed />} />
@@ -39,12 +45,12 @@ function App() {
         <Route path="/rabbitfeed" element={<Rabbitfeed />} />
         <Route path="/snailfeed" element={<Snail />} />
         <Route path="/admin" element={<Login />} />
-        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
 
-      <Footer />
+      {/* Render Footer only if the current path is not in hideFooterRoutes */}
+      {!hideFooterRoutes.some(route => location.pathname.startsWith(route)) && <Footer />}
     </div>
   );
 }
