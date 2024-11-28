@@ -1,4 +1,3 @@
-import React from "react";
 import HomePage from "./HomePage";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -6,7 +5,7 @@ import Services from "./Services";
 import Aboutus from "./Aboutus";
 import Contactus from "./Contactus";
 import Blog from "./Blog";
-import { Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Species from "./Species";
 import Pig from "./Pig";
 import Sheep from "./sheep";
@@ -16,7 +15,9 @@ import Fishfeed from "./Fishfeed";
 import Poultryfeed from "./Poultryfeed";
 import Rabbitfeed from "./Rabbitfeed";
 import Snail from "./Snail";
-import Login from "./Login";
+import Dashboard from "./Dashboard/Dashboard";
+import Signup from "./Auth/Signup";
+import Login from "./Auth/Login";
 
 function App() {
   return (
@@ -36,9 +37,11 @@ function App() {
         <Route path="/fishfeed" element={<Fishfeed />} />
         <Route path="/poultryfeed" element={<Poultryfeed />} />
         <Route path="/rabbitfeed" element={<Rabbitfeed />} />
-        <Route path="/snailfeed" element={<Snail/>} />
-        <Route path="/admin" element={<Login/>} />
-
+        <Route path="/snailfeed" element={<Snail />} />
+        <Route path="/admin" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
 
       <Footer />
