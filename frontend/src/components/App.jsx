@@ -16,6 +16,7 @@ import Fishfeed from "./Fishfeed";
 import Poultryfeed from "./Poultryfeed";
 import Rabbitfeed from "./Rabbitfeed";
 import Snail from "./Snail";
+import Login from "./Login";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/poultryfeed" element={<Poultryfeed />} />
         <Route path="/rabbitfeed" element={<Rabbitfeed />} />
         <Route path="/snailfeed" element={<Snail/>} />
+        <Route path="/admin" element={<Login/>} />
 
       </Routes>
 
