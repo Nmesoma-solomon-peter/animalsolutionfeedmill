@@ -1,18 +1,93 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { BlogService } from './blog.service';
+import { Injectable, NotFoundException } from '@nestjs/common';
+import { PrismaService } from '../../prisma/prisma.service';
 
-describe('BlogService', () => {
-  let service: BlogService;
+@Injectable()
+export class BlogService {
+  constructor(private prisma: PrismaService) {}
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [BlogService],
-    }).compile();
+  async createBlog(data: {
+    title: string;
+    content: string;
+    imageUrl?: string;
+    tags: string[];
+    userId: number;
+  }) {
+    const userExists = await this.prisma.user.findUnique({
+      where: { id: data.userId },
+    });
 
-    service = module.get<BlogService>(BlogService);
-  });
+    if (!userExists) {
+      throw new NotFoundException(
+        `User with ID ${data.userId} does not exist.`,
+      );
+    }
+    return this.prisma.blog.create({ data });
+  }
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
-  });
-});
+  async getBlogs() {
+    const blogs = await this.prisma.blog.findMany({
+      include: {
+        user: {
+          select: {
+            name: true, // Include the user's name
+          },
+        },
+      },
+    });
+
+    return blogs.map((blog) => ({
+      id: blog.id,
+      title: blog.title,
+      content: blog.content,
+      imageUrl: blog.imageUrl,
+      tags: blog.tags,
+      userId: blog.userId,
+      createdAt: blog.createdAt,
+      username: blog.user.name,
+    }));
+  }
+
+  async getBlogById(id: number) {
+    const blog = await this.prisma.blog.findUnique({
+      where: { id },
+      include: {
+        user: {
+          select: {
+            name: true, // Include the user's name
+          },
+        },
+      },
+    });
+
+    if (!blog) {
+      throw new NotFoundException(`Blog with ID ${id} not found.`);
+    }
+
+    return {
+      id: blog.id,
+      title: blog.title,
+      content: blog.content,
+      imageUrl: blog.imageUrl,
+      tags: blog.tags,
+      userId: blog.userId,
+      createdAt: blog.createdAt,
+      username: blog.user.name,
+    };
+  }
+
+  async updateBlog(
+    id: number,
+    data: Partial<{
+      title: string;
+      content: string;
+      imageUrl?: string;
+      tags: string[];
+    }>,
+  ) {
+    return this.prisma.blog.update({ where: { id }, data });
+  }
+
+  async deleteBlog(id: number) {
+    return this.prisma.blog.delete({ where: { id } });
+  }
+}

@@ -8,12 +8,17 @@ import {
   Delete,
   UseInterceptors,
   UploadedFile,
+  UseGuards,
+  Request,
 } from '@nestjs/common';
 import { BlogService } from './blog.service';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
+import { CreateBlogDto } from './dto/create-blog.dto';
+import { UpdateBlogDto } from './dto/update-blog.dto';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
-@ApiTags('blogs') // Tag for grouping in Swagger UI
+@ApiTags('blogs')
 @Controller('blogs')
 export class BlogController {
   constructor(private readonly blogService: BlogService) {}
@@ -28,20 +33,13 @@ export class BlogController {
   }
 
   @Post()
+  @UseGuards(JwtAuthGuard)
   @ApiOperation({ summary: 'Create a new blog post' })
   @ApiResponse({ status: 201, description: 'Blog post created successfully.' })
   @ApiResponse({ status: 400, description: 'Invalid input.' })
-  create(
-    @Body()
-    createBlogDto: {
-      title: string;
-      content: string;
-      imageUrl?: string;
-      tags: string[];
-      userId: number;
-    },
-  ) {
-    return this.blogService.createBlog(createBlogDto);
+  create(@Body() createBlogDto: CreateBlogDto, @Request() req) {
+    const userId = req.user.userId;
+    return this.blogService.createBlog({ ...createBlogDto, userId });
   }
 
   @Get()
@@ -66,23 +64,21 @@ export class BlogController {
   }
 
   @Patch(':id')
+  @UseGuards(JwtAuthGuard)
   @ApiOperation({ summary: 'Update a blog post by ID' })
   @ApiResponse({ status: 200, description: 'Blog post updated successfully.' })
   @ApiResponse({ status: 404, description: 'Blog post not found.' })
   update(
     @Param('id') id: string,
-    @Body()
-    updateBlogDto: Partial<{
-      title: string;
-      content: string;
-      imageUrl?: string;
-      tags: string[];
-    }>,
+    @Body() updateBlogDto: UpdateBlogDto,
+    @Request() req,
   ) {
-    return this.blogService.updateBlog(+id, updateBlogDto);
+    const userId = req.user.userId;
+    return this.blogService.updateBlog(+id, { ...updateBlogDto, userId });
   }
 
   @Delete(':id')
+  @UseGuards(JwtAuthGuard)
   @ApiOperation({ summary: 'Delete a blog post by ID' })
   @ApiResponse({ status: 200, description: 'Blog post deleted successfully.' })
   @ApiResponse({ status: 404, description: 'Blog post not found.' })
