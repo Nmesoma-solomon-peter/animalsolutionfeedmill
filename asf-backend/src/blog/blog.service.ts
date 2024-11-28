@@ -25,11 +25,54 @@ export class BlogService {
   }
 
   async getBlogs() {
-    return this.prisma.blog.findMany();
+    const blogs = await this.prisma.blog.findMany({
+      include: {
+        user: {
+          select: {
+            name: true,
+          },
+        },
+      },
+    });
+
+    return blogs.map((blog) => ({
+      id: blog.id,
+      title: blog.title,
+      content: blog.content,
+      imageUrl: blog.imageUrl,
+      tags: blog.tags,
+      userId: blog.userId,
+      createdAt: blog.createdAt,
+      username: blog.user.name,
+    }));
   }
 
   async getBlogById(id: number) {
-    return this.prisma.blog.findUnique({ where: { id } });
+    const blog = await this.prisma.blog.findUnique({
+      where: { id },
+      include: {
+        user: {
+          select: {
+            name: true,
+          },
+        },
+      },
+    });
+
+    if (!blog) {
+      throw new NotFoundException(`Blog with ID ${id} not found.`);
+    }
+
+    return {
+      id: blog.id,
+      title: blog.title,
+      content: blog.content,
+      imageUrl: blog.imageUrl,
+      tags: blog.tags,
+      userId: blog.userId,
+      createdAt: blog.createdAt,
+      username: blog.user.name,
+    };
   }
 
   async updateBlog(
@@ -39,6 +82,7 @@ export class BlogService {
       content: string;
       imageUrl?: string;
       tags: string[];
+      userId: number;
     }>,
   ) {
     return this.prisma.blog.update({ where: { id }, data });
