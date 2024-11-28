@@ -39,7 +39,7 @@ function App() {
         <Route path="/rabbitfeed" element={<Rabbitfeed />} />
         <Route path="/snailfeed" element={<Snail />} />
         <Route path="/admin" element={<Login />} />
-        <Route path="/login" element={<Login />} />
+        {/* <Route path="/login" element={<Login />} /> */}
         <Route path="/signup" element={<Signup />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
       </Routes>
