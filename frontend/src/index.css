@@ -2,3 +2,15 @@
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
+
+.sidebar {
+  width: 200px;
+  float: left;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.dashboard-content {
+  margin-left: 220px;
+  padding: 20px;
+}
