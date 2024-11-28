@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import CreateBlog from './CreateBlog';
 import ViewBlogs from './ViewBlogs';
+import "./Dashboard.css";
 
 const Dashboard = () => {
   return (
