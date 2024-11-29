@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import axiosInstance from '../../axiosInstance';
 import './dashboard.css';
 import Cookies from 'js-cookie';
@@ -8,6 +9,8 @@ const CreateBlog = () => {
     const [image, setImage] = useState(null);
     const [tags, setTags] = useState('');
     const [content, setContent] = useState('');
+
+    const navigate = useNavigate(); // Initialize navigate
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -20,20 +23,24 @@ const CreateBlog = () => {
         };
 
         try {
-
             const token = Cookies.get('access_token');
 
             if (!token) {
                 console.error('No token found. User may not be authenticated.');
                 return;
             }
+
             const response = await axiosInstance.post('/blogs', blogData, {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': `Bearer ${token}`,
                 },
             });
+
             console.log('Blog created successfully:', response.data);
+
+            // Redirect to /dashboard/create
+            navigate('/dashboard/create');
         } catch (error) {
             console.error('Error creating blog:', error.response ? error.response.data : error.message);
         }
