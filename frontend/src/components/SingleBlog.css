@@ -1,0 +1,37 @@
+.single-blog {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .single-blog-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .single-blog-meta {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .single-blog-image img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .single-blog-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .single-blog-tags {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+  }
+  
