@@ -1,65 +1,100 @@
-import React from 'react'
-import './Form.css'
+import React from 'react'; // Import React library
+import './Form.css'; // Import the CSS file for styling the form
 
+// Functional component for the "Contact Us" form
 function ContactusForm() {
     return (
         <>
             <div className="row whoweare-parent cont-fluid">
+                {/* Left section for an image or decorative element */}
                 <div className="col-lg-5 col-sm-12 form-left-img">
                     <div>
                         <div></div>
                     </div>
                 </div>
+                
+                {/* Right section for the contact form */}
                 <div className="col-lg-7 col-sm-12">
                     <div className='whoweare-right-dev'>
-                        <p className='what-first-p'> <i className="fa-solid fa-seedling"></i> Get in touch
+                        {/* Section heading */}
+                        <p className='what-first-p'> 
+                            <i className="fa-solid fa-seedling"></i> Get in touch
                         </p>
                         <h3 className='what-h3'>Have any Questions? Get in Touch!</h3>
-                        <form action="https://getform.io/f/awnnvklb" method="POST">
-                            <div class="row formrow">
-                                <div class="col-sm-6">
-                                    {/* <!-- Single Form Start --> */}
-                                    <div class="">
-                                        <input type="text" placeholder="Your name" name='name' required />
+                        
+                        {/* Contact form */}
+                        <form action="https://getform.io/f/bpjjxgvb" method="POST">
+                            <div className="row formrow">
+                                {/* Name input */}
+                                <div className="col-sm-6">
+                                    <div>
+                                        <input 
+                                            type="text" 
+                                            placeholder="Your name" 
+                                            name='name' 
+                                            required 
+                                        />
                                     </div>
-                                    {/* <!-- Single Form End --> */}
-                                </div>
-                                <div class="col-sm-6">
-                                    {/* <!-- Single Form Start --> */}
-                                    <div class="single-form">
-                                        <input type="tel" placeholder="Phone number *" name='phone' required />
-                                    </div>
-                                    {/* <!-- Single Form End --> */}
-                                </div>
-
-                                <div class="col-sm-6">
-                                    {/* <!-- Single Form Start --> */}
-                                    <div class="single-form">
-                                        <input type="email" placeholder="email address" name='email' required />
-                                    </div>
-                                    {/* <!-- Single Form End --> */}
-                                </div>
-                                <div class="col-sm-6">
-                                    {/* <!-- Single Form Start --> */}
-                                    <div class="single-form">
-                                        <input type="text" placeholder="subject" name='subject' required />
-                                    </div>
-                                    {/* <!-- Single Form End --> */}
                                 </div>
 
-                                <div class="col-sm-12">
-                                    {/* <!-- Single Form Start --> */}
-                                    <div class="single-form">
-                                        <textarea placeholder="Write A Message" spellcheck="false" name='message' required></textarea>
+                                {/* Phone input */}
+                                <div className="col-sm-6">
+                                    <div className="single-form">
+                                        <input 
+                                            type="tel" 
+                                            placeholder="Phone number *" 
+                                            name='phone' 
+                                            required 
+                                        />
                                     </div>
-                                    {/* <!-- Single Form End --> */}
                                 </div>
-                                <div class="col-sm-12">
-                                    {/* <!--  Single Form Start --> */}
-                                    <div class="form-btn text-center">
-                                        <button class="btn bg-primary submitbtn" type="submit">Send Message</button>
+
+                                {/* Email input */}
+                                <div className="col-sm-6">
+                                    <div className="single-form">
+                                        <input 
+                                            type="email" 
+                                            placeholder="email address" 
+                                            name='email' 
+                                            required 
+                                        />
                                     </div>
-                                    {/* <!--  Single Form End --> */}
+                                </div>
+
+                                {/* Subject input */}
+                                <div className="col-sm-6">
+                                    <div className="single-form">
+                                        <input 
+                                            type="text" 
+                                            placeholder="subject" 
+                                            name='subject' 
+                                            required 
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Message input */}
+                                <div className="col-sm-12">
+                                    <div className="single-form">
+                                        <textarea 
+                                            placeholder="Write A Message" 
+                                            spellCheck="false" 
+                                            name='message' 
+                                            required
+                                        ></textarea>
+                                    </div>
+                                </div>
+
+                                {/* Submit button */}
+                                <div className="col-sm-12">
+                                    <div className="form-btn text-center">
+                                        <button 
+                                            className="btn bg-primary submitbtn" 
+                                            type="submit"
+                                        >
+                                            Send Message
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -67,7 +102,7 @@ function ContactusForm() {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default ContactusForm
+export default ContactusForm; // Export the ContactusForm component
