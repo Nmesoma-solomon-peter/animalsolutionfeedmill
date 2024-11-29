@@ -32,7 +32,7 @@ function Hero() {
         // Function to change the random number every 2 minutes
         const interval = setInterval(() => {
             setRandNum(Math.floor(Math.random() * heroDetails.length)); // Update the random number
-        }, 4000); // 120000 milliseconds = 2 minutes
+        }, 3000); // 120000 milliseconds = 2 minutes
 
         // Cleanup function to clear the interval
         return () => clearInterval(interval);
